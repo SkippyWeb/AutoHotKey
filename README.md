@@ -2,7 +2,9 @@
 
 
 
-![Skippy-and-Name-01-400x223](F:\Cloud\Dropbox\Skippy Web\GitHub Repositories\AHK Scripts\Skippy-and-Name-01-400x223.jpg)
+![](https://github.com/SkippyWeb/Images/blob/main/SkippyStudio.jpg)
+
+
 
 AutoHotKey: https://www.autohotkey.com/
 
