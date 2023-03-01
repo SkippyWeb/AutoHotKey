@@ -151,13 +151,7 @@ if ErrorLevel
     MsgBox nAc/nOb. The folder could not be copied, perhaps because a folder of that name already exists in "%TargetDir%".
 		
 		
-;; **** bvckup settings ****
-SourceDir = C:\Users\Skippy Studio\AppData\Local\Bvckup2
-SplitPath, SourceDir, SourceDirName  
-FileCopyDir %SourceDir%, %TargetDir%\%SourceDirName%, 1 
-if ErrorLevel
-    MsgBox bvckup. The folder could not be copied, perhaps because a folder of that name already exists in "%TargetDir%".
-		
+
 		
 ;; **** VST3 Presets ****
 SourceDir = C:\Users\Skippy Studio\Documents\VST3 Presets
