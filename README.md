@@ -11,9 +11,9 @@ AutoHotKey: https://www.autohotkey.com/
 
 
 **Developer**
-    Antoine van Kampen
-    www.skippyweb.eu
-    January 2023
+    Antoine van Kampen   
+    www.skippyweb.eu  
+    January 2023  
 
 
 
