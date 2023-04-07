@@ -15,11 +15,13 @@ AutoHotKey: https://www.autohotkey.com/
     www.skippyweb.eu  
     January 2023  
 
+**Updates**: 7 April 2023
+
 
 
 **Content**
 
-- CopySettings.ahk
+- CopySettings.ahk (AHK V1) and CopySettings_2-AHK_v2.ahk (AHK V2)
   - Copy settings from various applications to single location for easy backup
 
 - OpenMyComputer.ahk
