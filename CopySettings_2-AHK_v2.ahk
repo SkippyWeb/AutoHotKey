@@ -52,7 +52,18 @@ Loop Files SourceDir "\HALion*", "D"
   try
 	DirCopy A_LoopFilePath, TargetDir "\HALion\" A_LoopFileName, 1
   catch
-    MsgBox "HALION. An error occurred when copying the directory.`n`n" A_LoopFilePath
+    MsgBox "HALION ROAMING. An error occurred when copying the directory.`n`n" A_LoopFilePath
+}
+
+SourceDir := "C:\Users\Skippy Studio\Documents\Steinberg"
+DirCreate TargetDir  "\HALion\Documents"
+
+Loop Files SourceDir "\HALion*", "D"
+{ 
+  try
+	DirCopy A_LoopFilePath, TargetDir "\HALion\Documents\" A_LoopFileName, 1
+  catch
+    MsgBox "HALION Documents. An error occurred when copying the directory.`n`n" A_LoopFilePath
 }
 
 
