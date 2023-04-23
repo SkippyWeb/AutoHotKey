@@ -18,6 +18,7 @@
 ;; Currently the following settings are copied:
 ;; **** HALion ****
 ;; **** SPECTRALAYERS ****
+;; **** SONARWORKS/SOUNDID PROFILES ****
 
 
 #Requires AutoHotkey v2.0 ;; See also https://www.autohotkey.com/docs/v2/Program.htm#launcher
@@ -67,6 +68,7 @@ Loop Files SourceDir "\HALion*", "D"
 }
 
 
+
 ;; **** SPECTRALAYERS ****
 SourceDir := "C:\Users\Skippy Studio\AppData\Roaming\Steinberg"
 
@@ -86,6 +88,17 @@ Loop Files TargetDir "\SpectraLayers\SpectraLayers*", "D"
   catch
     MsgBox "An error occurred when deleting a directory.`n`n" A_LoopFilePath "\Cache"
 }
+
+
+;; **** SONARWORKS/SOUNDID ****
+SourceDir := "C:\Users\Skippy Studio\AppData\Local\Sonarworks\SoundID Reference\Sonarworks Projects"
+DirCreate TargetDir  "\SoundID"
+SplitPath SourceDir, &SourceDirName  ; Extract only the directory name from its full path.
+MsgBox TargetDir SourceDir SourceDirName
+try
+	DirCopy SourceDir, TargetDir "\SoundID\" SourceDirName, 1
+  catch
+    MsgBox "SoundID. An error occurred when copying the directory.`n`n" A_LoopFilePath
 
 
 
