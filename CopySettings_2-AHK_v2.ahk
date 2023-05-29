@@ -16,6 +16,8 @@
 ;; License: GPL
 
 ;; Currently the following settings are copied:
+;; **** DORICO 4
+;; **** DORICO 5
 ;; **** HALion ****
 ;; **** SPECTRALAYERS ****
 ;; **** SONARWORKS/SOUNDID PROFILES ****
@@ -42,6 +44,32 @@ FileAppend "`n`nBackup of settings (AHK V2.0). `n Time: " . TimeString . "`n Tar
 ;;
 ;; Now copy all settings one-by-On
 ;;
+
+;; **** DORICO 4 ****
+SourceDir := "C:\Users\Skippy Studio\AppData\Roaming\Steinberg"
+DirCreate TargetDir  "\Dorico 4"
+
+Loop Files SourceDir "\Dorico 4*", "D"   ;;See https://www.autohotkey.com/docs/v2/lib/LoopFiles.htm
+{ 
+  try
+	DirCopy A_LoopFilePath, TargetDir "\Dorico 4\" A_LoopFileName, 1
+  catch
+    MsgBox "Dorico 4 ROAMING. An error occurred when copying the directory.`n`n" A_LoopFilePath
+}
+
+
+;; **** DORICO 5 ****
+SourceDir := "C:\Users\Skippy Studio\AppData\Roaming\Steinberg"
+DirCreate TargetDir  "\Dorico 5"
+
+Loop Files SourceDir "\Dorico 5*", "D"   ;;See https://www.autohotkey.com/docs/v2/lib/LoopFiles.htm
+{ 
+  try
+	DirCopy A_LoopFilePath, TargetDir "\Dorico 5\" A_LoopFileName, 1
+  catch
+    MsgBox "Dorico 5 ROAMING. An error occurred when copying the directory.`n`n" A_LoopFilePath
+}
+
 
 
 ;; **** HALion ****
@@ -94,7 +122,7 @@ Loop Files TargetDir "\SpectraLayers\SpectraLayers*", "D"
 SourceDir := "C:\Users\Skippy Studio\AppData\Local\Sonarworks\SoundID Reference\Sonarworks Projects"
 DirCreate TargetDir  "\SoundID"
 SplitPath SourceDir, &SourceDirName  ; Extract only the directory name from its full path.
-MsgBox TargetDir SourceDir SourceDirName
+
 try
 	DirCopy SourceDir, TargetDir "\SoundID\" SourceDirName, 1
   catch
