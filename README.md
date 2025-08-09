@@ -12,10 +12,10 @@ AutoHotKey: https://www.autohotkey.com/
 
 **Developer**
     Antoine van Kampen   
-    www.skippyweb.eu  
+    www.skippystudio.nl 
     January 2023  
 
-**Updates**: 7 April 2023
+**Updates**: 7 April 2023, 9 august 2025
 
 
 
@@ -27,7 +27,7 @@ AutoHotKey: https://www.autohotkey.com/
 - OpenMyComputer.ahk
   - Open MyComputer
 
-- PrepareForCubase.ahk
+- Kill_Applications.ahk (v2)
   - Open programs used in conjunction with Cubase and close unused applications
 
 - Set_X32_Buffer_xx-samples.ahk
